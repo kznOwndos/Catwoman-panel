@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Tahoma, sans-serif;
+    background: #0f1117;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Login */
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 420px;
+
+    background: #171a23;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    border: 1px solid #272c38;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+    color: #111111;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #8d94a5;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b8becb;
+}
+
+.input-group input {
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border: 1px solid #303645;
+
+    background: #10131a;
+
+    color: white;
+
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #ffffff;
+}
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: white;
+    color: black;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.error {
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+
+    background: #3a1e24;
+
+    color: #ff9da9;
+
+    text-align: center;
+}
+
+
+/* Panel */
+
+.panel {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+
+    background: #151820;
+
+    border-left: 1px solid #272c38;
+
+    padding: 25px 15px;
+}
+
+.brand {
+    font-size: 21px;
+    font-weight: bold;
+
+    padding: 10px 15px 30px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.sidebar nav a {
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    color: #9da4b4;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #242936;
+    color: white;
+}
+
+.content {
+    flex: 1;
+
+    padding: 35px;
+
+    overflow-x: hidden;
+}
+
+.topbar {
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    margin: 0 0 8px;
+}
+
+.topbar p {
+    margin: 0;
+    color: #858d9f;
+}
+
+
+/* Cards */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #171a23;
+
+    border: 1px solid #272c38;
+
+    border-radius: 15px;
+
+    padding: 25px;
+}
+
+.card-title {
+    display: block;
+
+    color: #8e96a8;
+
+    margin-bottom: 12px;
+}
+
+.card strong {
+    font-size: 23px;
+}
+
+.online {
+    color: #7ee2a8 !important;
+}
+
+
+/* Section */
+
+.section {
+    background: #171a23;
+
+    border: 1px solid #272c38;
+
+    border-radius: 15px;
+
+    padding: 25px;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+
+/* Status */
+
+.status-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    background: #11141b;
+
+    border-radius: 12px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #7ee2a8;
+}
+
+.status-box p {
+    color: #858d9f;
+    margin-bottom: 0;
+}
+
+
+/* Settings */
+
+.settings-card {
+    margin-top: 20px;
+}
+
+.setting-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #292e3a;
+}
+
+.setting-row:last-child {
+    border-bottom: none;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .panel {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        border-left: none;
+        border-bottom: 1px solid #272c38;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+
+        overflow-x: auto;
+    }
+
+    .sidebar nav a {
+        white-space: nowrap;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .login-box {
+        padding: 25px;
+    }
+
+}
