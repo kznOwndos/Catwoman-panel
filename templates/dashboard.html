@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>داشبورد | Xray Panel</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="panel">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            Xray Panel
+        </div>
+
+        <nav>
+
+            <a href="/dashboard" class="active">
+                🏠 داشبورد
+            </a>
+
+            <a href="/settings">
+                ⚙️ تنظیمات
+            </a>
+
+            <a href="/logout">
+                🚪 خروج
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="content">
+
+        <div class="topbar">
+
+            <div>
+                <h1>داشبورد</h1>
+
+                <p>
+                    خوش آمدی {{ username }}
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <span class="card-title">
+                    وضعیت پنل
+                </span>
+
+                <strong class="online">
+                    آنلاین
+                </strong>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="card-title">
+                    Xray
+                </span>
+
+                <strong>
+                    آماده اتصال
+                </strong>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="card-title">
+                    کانفیگ‌ها
+                </span>
+
+                <strong>
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>
+                وضعیت سرویس
+            </h2>
+
+            <div class="status-box">
+
+                <div class="status-dot"></div>
+
+                <div>
+
+                    <strong>
+                        پنل با موفقیت اجرا شده است
+                    </strong>
+
+                    <p>
+                        در مرحله بعد Xray Core را به این پنل متصل می‌کنیم.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+  </html>
