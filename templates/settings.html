@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>تنظیمات | Xray Panel</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="panel">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            Xray Panel
+        </div>
+
+        <nav>
+
+            <a href="/dashboard">
+                🏠 داشبورد
+            </a>
+
+            <a href="/settings" class="active">
+                ⚙️ تنظیمات
+            </a>
+
+            <a href="/logout">
+                🚪 خروج
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="content">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>
+                    تنظیمات
+                </h1>
+
+                <p>
+                    تنظیمات پایه پنل
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <h2>
+                اطلاعات پنل
+            </h2>
+
+            <div class="settings-card">
+
+                <div class="setting-row">
+
+                    <span>
+                        نام کاربری
+                    </span>
+
+                    <strong>
+                        {{ username }}
+                    </strong>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <span>
+                        وضعیت
+                    </span>
+
+                    <strong class="online">
+                        فعال
+                    </strong>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <span>
+                        Xray Core
+                    </span>
+
+                    <strong>
+                        متصل نشده
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
