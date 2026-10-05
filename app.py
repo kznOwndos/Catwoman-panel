@@ -1,17 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-import os
 
 app = Flask(__name__)
 
-# Secret key
-app.secret_key = os.environ.get(
-    "SECRET_KEY",
-    "change-this-secret-key"
-)
+# Simple settings
+app.secret_key = "my-simple-secret-key"
 
-# Login credentials
-USERNAME = os.environ.get("PANEL_USERNAME", "admin")
-PASSWORD = os.environ.get("PANEL_PASSWORD", "admin123")
+# Login information
+USERNAME = "admin"
+PASSWORD = "admin123"
 
 
 @app.route("/", methods=["GET"])
@@ -26,11 +22,14 @@ def index():
 def login():
 
     if request.method == "POST":
+
         username = request.form.get("username", "")
         password = request.form.get("password", "")
 
         if username == USERNAME and password == PASSWORD:
+
             session["logged_in"] = True
+
             return redirect(url_for("dashboard"))
 
         return render_template(
@@ -74,7 +73,8 @@ def logout():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
+
+    port = 8080
 
     app.run(
         host="0.0.0.0",
